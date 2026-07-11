@@ -47,6 +47,10 @@ func checkFileContent(fileName string) int {
 		n++
 	}
 
+	if err := reader.Err(); err != nil {
+		log.Fatal(err)
+	}
+
 	return result
 }
 
